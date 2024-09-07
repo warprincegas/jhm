@@ -1,0 +1,953 @@
+body {
+  position: relative;
+}
+
+.donate-img {
+  margin-top: 0px;
+  position: relative;
+}
+
+.donate-img img {
+  width: 100%;
+  height: 100vh;
+}
+
+.donate-img h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  font-size: 3rem;
+}
+
+.products-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.products-cont .header {
+  width: 85%;
+}
+
+.products-cont .header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.products-cont .header span {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.products-cont .products {
+  margin-top: 30px;
+  width: 85%;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.products .product {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.products .product:last-child {
+  display: none;
+}
+
+.products .product img {
+  width: 40%;
+  border-radius: 10px;
+  height: 300px;
+  object-fit: cover;
+  /* width: 400px; */
+}
+
+.product .product-details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 5px;
+}
+
+.product-title {
+  font-weight: 600;
+  /* font: 5rem; */
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+.product-text {
+  font-family: "Times New Roman", Times, serif;
+  /* font-size: 0.99rem; */
+  line-height: 22px;
+}
+
+.product-price-type {
+  display: flex;
+  border: 1px solid gainsboro;
+  width: fit-content;
+  background-color: rgb(246, 246, 246);
+  border-radius: 5px;
+  border-left: 0;
+}
+
+.price-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-price-type span {
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 8px;
+  cursor: pointer;
+  border-left: 1px solid gainsboro;
+}
+
+.price-button button {
+  padding: 8px 15px;
+  border: none;
+  background-color: red;
+  border-radius: 5px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.active-price {
+  color: white;
+  background-color: rgb(29, 28, 28);
+}
+
+.active-button {
+  color: white;
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+
+.leaving-legacy {
+  margin: 50px 0;
+  margin-bottom: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0px 8%;
+  background-color: rgba(240, 240, 240);
+}
+
+.leaving-legacy .content {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.leaving-legacy .content h1 {
+  margin: 0;
+}
+
+.leaving-legacy .content span {
+  width: 90%;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.leaving-legacy img {
+  width: 40%;
+  border-radius: 10px;
+  /* height: 350px; */
+}
+
+.pop-note-cont {
+  position: fixed;
+  background-color: rgba(33, 32, 32, 0.83);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 20;
+  justify-content: center;
+  display: none;
+}
+
+.popNoteCont {
+  position: fixed;
+  z-index: 100;
+  right: 13%;
+  width: 100%;
+  left: 13%;
+}
+
+.pop-note-cont .hide {
+  width: 100%;
+  position: relative;
+}
+
+.pop-note {
+  width: 74%;
+  background-color: white;
+  top: 20px;
+  margin-top: 35px;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 20px 5px;
+  height: fit-content;
+  gap: 15px;
+  position: absolute;
+  display: none;
+}
+.pop-note .top {
+  padding: 5px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px gainsboro solid;
+  border-radius: 7px;
+  background-color: rgba(240, 240, 240);
+}
+
+.pop-note .top .left {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.pop-note .top .left .product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.pop-note .top .left .product-details .note-title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.2rem;
+}
+
+.pop-note .top .left .product-details h2 {
+  margin: 0;
+  font-family: cursive;
+}
+
+.pop-note .top .left .sucess {
+  width: 50px;
+}
+
+.pop-note img {
+  width: 150px;
+}
+
+.pop-note .cart-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+}
+
+.pop-note .cart-details .cart-price {
+  display: flex;
+  align-items: center;
+}
+
+.pop-note .cart-details .cart-price h3 {
+  margin: 0;
+}
+
+.pop-note .cart-details .cart-price h3 em {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.pop-note .cart-details .cart-price h3 em span {
+}
+
+.pop-note .cart-details .cart-price h2 {
+  color: rgb(178, 18, 18);
+  margin: 0;
+}
+
+.pop-note .cart-details .cart-link {
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.pop-bottom {
+  display: flex;
+  padding: 0px 20px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pop-bottom .checkout-link {
+  color: white;
+  background-color: red;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.pop-bottom .shop-link {
+  text-decoration: none;
+  color: rgb(0, 140, 255);
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+@media (min-width: 451px) and (max-width: 950px) {
+  body {
+    position: relative;
+  }
+
+  .donate-img {
+    margin-top: 90px;
+    position: relative;
+  }
+
+  .donate-img img {
+    width: 100%;
+    height: 60vh;
+  }
+
+  .donate-img h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: white;
+    font-size: 3rem;
+  }
+
+  .products-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .products-cont .header {
+    width: 85%;
+  }
+
+  .products-cont .header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: red;
+  }
+
+  .products-cont .header span {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .products-cont .products {
+    margin-top: 30px;
+    width: 85%;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .products .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .products .product:last-child {
+    display: none;
+  }
+
+  .products .product img {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+    object-fit: cover;
+    /* width: 400px; */
+    border-radius: 20px;
+  }
+
+  .product .product-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 5px;
+  }
+
+  .product-title {
+    font-weight: 600;
+    /* font: 5rem; */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    margin-top: 0;
+  }
+
+  .product-text {
+    font-family: "Times New Roman", Times, serif;
+    /* font-size: 0.99rem; */
+    line-height: 22px;
+  }
+
+  .product-price-type {
+    display: flex;
+    border: 1px solid gainsboro;
+    width: fit-content;
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    border-left: 0;
+  }
+
+  .price-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .product-price-type span {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px;
+    cursor: pointer;
+    border-left: 1px solid gainsboro;
+  }
+
+  .price-button button {
+    padding: 8px 15px;
+    border: none;
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .active-price {
+    color: white;
+    background-color: rgb(29, 28, 28);
+  }
+
+  .active-button {
+    color: white;
+    opacity: 1;
+    transition: opacity 0.4s;
+  }
+
+  .leaving-legacy {
+    margin: 50px 0;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    padding: 0px 8%;
+    background-color: rgba(240, 240, 240);
+  }
+
+  .leaving-legacy .content {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .leaving-legacy .content h1 {
+    margin: 0;
+  }
+
+  .leaving-legacy .content span {
+    width: 90%;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .leaving-legacy img {
+    width: 40%;
+    border-radius: 10px;
+    /* height: 350px; */
+  }
+
+  .pop-note-cont {
+    position: fixed;
+    background-color: rgba(33, 32, 32, 0.83);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 20;
+    justify-content: center;
+    display: none;
+  }
+
+  .popNoteCont {
+    position: fixed;
+    z-index: 100;
+    right: 0%;
+    width: 100%;
+    left: 0%;
+  }
+
+  .pop-note-cont .hide {
+    width: 100%;
+    position: relative;
+  }
+
+  .pop-note {
+    width: 100%;
+    background-color: white;
+    top: 20px;
+    margin-top: 35px;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 20px 5px;
+    height: fit-content;
+    gap: 10px;
+    position: absolute;
+    display: none;
+  }
+  .pop-note .top {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px gainsboro solid;
+    border-radius: 7px;
+    background-color: rgba(240, 240, 240);
+  }
+
+  .pop-note .top .left {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .pop-note .top .left .product-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pop-note .top .left .product-details .note-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2rem;
+  }
+
+  .pop-note .top .left .product-details h2 {
+    margin: 0;
+    font-family: cursive;
+  }
+
+  .pop-note .top .left .sucess {
+    width: 50px;
+  }
+
+  .pop-note img {
+    width: 100px;
+  }
+
+  .pop-note img:last-child {
+    display: none;
+  }
+
+  .pop-note .cart-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .pop-note .cart-details .cart-price {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .pop-note .cart-details .cart-price h3 {
+    margin: 0;
+  }
+
+  .pop-note .cart-details .cart-price h3 em {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .pop-note .cart-details .cart-price h3 em span {
+  }
+
+  .pop-note .cart-details .cart-price h2 {
+    color: rgb(178, 18, 18);
+    margin: 0;
+  }
+
+  .pop-note .cart-details .cart-link {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-size: 1.2rem;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .pop-bottom {
+    display: flex;
+    padding: 0px 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pop-bottom .checkout-link {
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .pop-bottom .shop-link {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-size: 1.2rem;
+    width: fit-content;
+    font-family: "Times New Roman", Times, serif;
+  }
+}
+
+@media (max-width: 450px) {
+  body {
+    position: relative;
+  }
+
+  .donate-img {
+    margin-top: 90px;
+    position: relative;
+  }
+
+  .donate-img img {
+    width: 100%;
+    height: 350px;
+  }
+
+  .donate-img h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: white;
+    font-size: 3rem;
+  }
+
+  .products-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .products-cont .header {
+    width: 85%;
+  }
+
+  .products-cont .header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: red;
+  }
+
+  .products-cont .header span {
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .products-cont .products {
+    margin-top: 30px;
+    width: 85%;
+    /* padding: 10px; */
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+  }
+
+  .products .product {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .products .product:last-child {
+    display: none;
+  }
+
+  .products .product img {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    /* width: 400px; */
+  }
+
+  .product .product-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    gap: 5px;
+  }
+
+  .product-title {
+    font-weight: 600;
+    /* font: 5rem; */
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    margin-top: 0;
+  }
+
+  .product-text {
+    font-family: "Times New Roman", Times, serif;
+    /* font-size: 0.99rem; */
+    line-height: 22px;
+  }
+
+  .product-price-type {
+    display: flex;
+    border: 1px solid gainsboro;
+    width: fit-content;
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    border-left: 0;
+  }
+
+  .price-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .product-price-type span {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px;
+    cursor: pointer;
+    border-left: 1px solid gainsboro;
+  }
+
+  .price-button button {
+    padding: 8px 15px;
+    border: none;
+    background-color: red;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+
+  .active-price {
+    color: white;
+    background-color: rgb(29, 28, 28);
+  }
+
+  .active-button {
+    color: white;
+    opacity: 1;
+    transition: opacity 0.4s;
+  }
+
+  .leaving-legacy {
+    margin: 50px 0;
+    margin-bottom: 80px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding: 0px 8%;
+    background-color: rgba(240, 240, 240);
+  }
+
+  .leaving-legacy .content {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .leaving-legacy .content h1 {
+    margin: 0;
+  }
+
+  .leaving-legacy .content span {
+    width: 100%;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .leaving-legacy img {
+    width: 100%;
+    border-radius: 10px;
+    /* height: 350px; */
+    margin-top: 10px;
+  }
+
+  .pop-note-cont {
+    position: fixed;
+    background-color: rgba(33, 32, 32, 0.83);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    z-index: 20;
+    justify-content: center;
+    display: none;
+  }
+
+  .popNoteCont {
+    position: fixed;
+    z-index: 100;
+    right: 0%;
+    width: 100%;
+    left: 0%;
+  }
+
+  .pop-note-cont .hide {
+    width: 100%;
+    position: relative;
+  }
+
+  .pop-note {
+    width: 100%;
+    background-color: white;
+    top: 20px;
+    margin-top: 35px;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 20px 5px;
+    height: fit-content;
+    gap: 10px;
+    position: absolute;
+    display: none;
+  }
+  .pop-note .top {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px gainsboro solid;
+    border-radius: 7px;
+    background-color: rgba(240, 240, 240);
+  }
+
+  .pop-note .top .left {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 40px;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .pop-note .top .left .product-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pop-note .top .left .product-details .note-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2rem;
+  }
+
+  .pop-note .top .left .product-details h2 {
+    margin: 0;
+    font-family: cursive;
+  }
+
+  .pop-note .top .left .sucess {
+    width: 50px;
+  }
+
+  .pop-note img {
+    width: 100px;
+  }
+
+  .pop-note img:last-child {
+    display: none;
+  }
+
+  .pop-note .cart-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .pop-note .cart-details .cart-price {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .pop-note .cart-details .cart-price h3 {
+    margin: 0;
+  }
+
+  .pop-note .cart-details .cart-price h3 em {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .pop-note .cart-details .cart-price h3 em span {
+  }
+
+  .pop-note .cart-details .cart-price h2 {
+    color: rgb(178, 18, 18);
+    margin: 0;
+  }
+
+  .pop-note .cart-details .cart-link {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-size: 1.2rem;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .pop-bottom {
+    display: flex;
+    padding: 0px 20px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .pop-bottom .checkout-link {
+    color: white;
+    background-color: red;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .pop-bottom .shop-link {
+    text-decoration: none;
+    color: rgb(0, 140, 255);
+    font-size: 1.2rem;
+    width: 20%;
+    font-family: "Times New Roman", Times, serif;
+  }
+}

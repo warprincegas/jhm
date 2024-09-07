@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="Styles/styles.css" />
+    <link rel="stylesheet" href="Styles/checkout.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="Images/hag_logo_rev_horiz.svg" alt="" />
+        </a>
+      </div>
+      <ul>
+        <a href="about.html">
+          <li>About</li>
+        </a>
+        <li>Shop</li>
+        <a href="donate.html">
+          <li>Donate</li>
+        </a>
+        <a href="cart.html">
+          <li>Cart</li>
+        </a>
+      </ul>
+
+      <img src="Images/download (1).svg" alt="" class="menu" />
+    </header>
+
+    <div class="pop-menu">
+      <ul>
+        <a href="about.html">
+          <li>About</li>
+        </a>
+        <li>Shop</li>
+        <a href="donate.html">
+          <li>Donate</li>
+        </a>
+        <a href="cart.html">
+          <li>Cart</li>
+        </a>
+      </ul>
+    </div>
+
+    <section>
+      <div class="top">
+        <h1>Checkout</h1>
+      </div>
+      <div class="checkout-cont">
+        <div class="top-box">
+          <p>CHECKOUT</p>
+          <p>SHIP TO</p>
+        </div>
+        <form action="">
+          <div class="checkout-content">
+            <div class="user-details-cont">
+              <div class="name-cont">
+                <div class="input-cont">
+                  <span><small>*</small>First Name</span>
+                  <input
+                    type="text"
+                    required
+                    class="first-name"
+                    minlength="2"
+                    oninput="this.setCustomValidity('')"
+                  />
+                </div>
+                <div class="input-cont">
+                  <span><small>*</small>Last Name</span>
+                  <input
+                    type="text"
+                    required
+                    class="last-name"
+                    minlength="2"
+                    oninvalid="this.setCustomValidity('Enter a valid name')"
+                    oninput="this.setCustomValidity('')"
+                  />
+                </div>
+              </div>
+              <div class="select-region">
+                <h4>Select a Region</h4>
+                <div class="regions">
+                  <div class="region">
+                    <input type="radio" name="1" data-id="1" class="us" />
+                    <span>US</span>
+                  </div>
+                  <div class="region">
+                    <input
+                      type="radio"
+                      name="1"
+                      data-id="2"
+                      class="international"
+                    />
+                    <span>International</span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-cont">
+                <span><small>*</small>Country</span>
+                <select name="" id="" class="section-cont"></select>
+              </div>
+              <div class="input-cont">
+                <span><small>*</small>Address 1</span>
+                <input
+                  type="text"
+                  required
+                  class="firstAddress"
+                  minlength="5"
+                  oninvalid="this.setCustomValidity('Enter a valid Address')"
+                  oninput="this.setCustomValidity('')"
+                />
+              </div>
+              <div class="input-cont">
+                <span>Address 2</span>
+                <input
+                  type="text"
+                  class="secondAddress"
+                  minlength="3"
+                  oninvalid="this.setCustomValidity('Enter a valid Address')"
+                  oninput="this.setCustomValidity('')"
+                />
+              </div>
+              <div class="city-details">
+                <div class="input-cont">
+                  <span><small>*</small>City</span>
+                  <input
+                    type="text"
+                    required
+                    class="city"
+                    oninvalid="this.setCustomValidity('Enter a valid City')"
+                    oninput="this.setCustomValidity('')"
+                    minlength="2"
+                  />
+                </div>
+                <div class="input-cont">
+                  <span><small>*</small>Postal Code</span>
+                  <input
+                    type="number"
+                    required
+                    class="postal"
+                    oninvalid="this.setCustomValidity('Enter a valid Postal Code')"
+                    oninput="this.setCustomValidity('')"
+                  />
+                </div>
+              </div>
+              <div class="email-number-cont">
+                <div class="input-cont">
+                  <span><small>*</small>Email</span>
+                  <input
+                    type="email"
+                    required
+                    class="email"
+                    oninvalid="this.setCustomValidity('Enter a valid email')"
+                    oninput="this.setCustomValidity('')"
+                  />
+                </div>
+                <div class="input-cont">
+                  <span><small>*</small>Phone</span>
+                  <div class="phone-cont">
+                    <div class="country-code">+234</div>
+                    <input
+                      type="tel"
+                      required
+                      class="phone"
+                      maxlength="11"
+                      minlength="10"
+                      oninvalid="this.setCustomValidity('Enter a valid Phone')"
+                      oninput="this.setCustomValidity('')"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-cont">
+              <span>Your Order</span>
+              <div class="top">
+                <h4>Product Name</h4>
+                <h4>Unit Price</h4>
+                <h4>Ext.Price</h4>
+              </div>
+              <div class="orders"></div>
+              <div class="order-bottom"></div>
+            </div>
+          </div>
+          <div class="btn">
+            <button>Continue</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div class="loader hide-loader"></div>
+
+    <footer>
+      <div class="content">
+        <img src="Images/hag_logo_rev_horiz.svg" alt="" class="foot-logo" />
+
+        <div class="footer-links">
+          <div class="links">
+            <h1>About</h1>
+            <span>Who We Are</span>
+            <span>Bacome a Christian</span>
+          </div>
+          <div class="links">
+            <h1>Shop</h1>
+            <span>Sermons</span>
+            <span>Books</span>
+            <span>Music</span>
+            <span>Gifts</span>
+          </div>
+          <div class="links">
+            <h1>Donate</h1>
+            <span>Donate Now</span>
+          </div>
+          <div class="links">
+            <h1>Follow</h1>
+            <div class="social-link">
+              <img src="Images/facebook-round-line-icon.svg" alt="" />
+              <img src="Images/instagram-round-line-icon.svg" alt="" />
+              <img src="Images/twitter-round-line-icon.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="links">
+            <h1>Conatcts</h1>
+            <span>1-800-854-9899</span>
+            <span>support@jhm.org</span>
+            <span>P.O. Box 1400 San Antonio, Texas 78295</span>
+          </div>
+        </div>
+        <div class="footer-logos">
+          <img src="Images/website-logos_hm.png" alt="" />
+          <img src="Images/website-logos_cornerstone.png" alt="" />
+          <img src="Images/website-logos_ccs.png" alt="" />
+          <img src="Images/website-logos_soh.png" alt="" />
+        </div>
+      </div>
+    </footer>
+    <!-- <script
+      language="JavaScript"
+      src="http://www.geoplugin.net/javascript.gp"
+      type="text/javascript"
+    ></script> -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script type="module" src="Scripts/checkout.js"></script>
+  </body>
+</html>

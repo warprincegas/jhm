@@ -1,0 +1,731 @@
+* {
+  box-sizing: border-box;
+}
+section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section .top:first-child {
+  width: 85%;
+  border-bottom: 2px red solid;
+  margin-bottom: 25px;
+}
+
+section .top h1 {
+  font-size: 2.1rem;
+}
+
+.checkout-cont {
+  width: 85%;
+  border: 1px gainsboro solid;
+  margin-bottom: 70px;
+}
+
+.checkout-cont .top-box {
+  background-color: black;
+  color: rgba(255, 255, 255);
+}
+
+.checkout-cont .top-box p {
+  margin: 0;
+  padding: 8px 10px;
+}
+
+.checkout-cont .top-box p:last-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.349);
+}
+
+form {
+  display: flex;
+  padding: 25px;
+  align-items: start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.checkout-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.user-details-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-details-cont .name-cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.input-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-cont span {
+  position: relative;
+  font-weight: 600;
+  margin-left: 7px;
+}
+
+.input-cont input {
+  outline-color: lightblue;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 8px 10px;
+}
+
+.input-cont select {
+  outline-color: lightblue;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 1rem;
+}
+
+.input-cont small {
+  color: red;
+  top: -3px;
+  left: -8px;
+  position: absolute;
+}
+
+.select-region {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.select-region h4 {
+  margin: 0;
+  /* font-weight: 900; */
+}
+
+.region span {
+  /* font-weight: 600; */
+}
+
+.city-details,
+.email-number-cont {
+  display: flex;
+  gap: 20px;
+}
+
+.phone-cont {
+  display: flex;
+  align-items: center;
+}
+
+.country-code {
+  background-color: rgb(235, 235, 240);
+  padding: 7px 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.phone-cont input {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.btn {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: end;
+}
+
+.btn button {
+  color: rgb(0, 128, 255);
+  border-radius: 7px;
+  border: 1px solid rgb(126, 126, 126);
+  padding: 4px 10px;
+}
+
+.order-cont {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  border-radius: 10px;
+  border: 1px gainsboro solid;
+  /* padding: 10px; */
+  height: fit-content;
+}
+
+.order-cont span {
+  background-color: rgba(245, 245, 245);
+  padding: 7px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.order-cont .top {
+  display: flex;
+  background-color: rgba(235, 235, 235);
+  padding: 7px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.order-cont .top h4:first-child,
+.order div:first-child {
+  width: 40%;
+}
+
+.order-cont .top h4:nth-child(2),
+.order div:nth-child(2) {
+  width: 30%;
+  text-align: center;
+}
+.order-cont .top h4:last-child,
+.order div:last-child {
+  width: 20%;
+  text-align: end;
+}
+
+.order-cont .top h4 {
+  margin: 0;
+}
+
+.orders {
+  display: flex;
+  flex-direction: column;
+}
+
+.orders .order {
+  padding: 7px;
+  display: flex;
+  gap: 10;
+  justify-content: space-between;
+}
+
+.bg {
+  background-color: rgba(235, 235, 235);
+}
+
+.order div {
+  font-size: 0.9rem;
+}
+
+.order-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px;
+  margin-top: 20px;
+}
+
+.order-bottom h4 {
+  margin: 0;
+}
+
+.loader {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  justify-content: center;
+  background-color: white;
+  transition: opacity 0.7s, visibility 0.7s;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid gainsboro;
+  border-top-color: black;
+  border-radius: 50%;
+  animation: loading 0.7s ease infinite;
+}
+
+.hide-loader {
+  display: none;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media (min-width: 451px) and (max-width: 950px) {
+  section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section .top:first-child {
+    width: 70%;
+    border-bottom: 2px red solid;
+    margin-bottom: 25px;
+  }
+
+  section .top h1 {
+    font-size: 2.1rem;
+  }
+
+  .checkout-cont {
+    width: 70%;
+    border: 1px gainsboro solid;
+    margin-bottom: 70px;
+  }
+
+  .checkout-cont .top-box {
+    background-color: black;
+    color: rgba(255, 255, 255);
+  }
+
+  .checkout-cont .top-box p {
+    margin: 0;
+    padding: 8px 10px;
+  }
+
+  .checkout-cont .top-box p:last-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.349);
+  }
+
+  form {
+    display: flex;
+    padding: 25px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .checkout-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .user-details-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .user-details-cont .name-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .input-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .input-cont span {
+    position: relative;
+    font-weight: 600;
+    margin-left: 7px;
+  }
+
+  .input-cont input {
+    outline-color: lightblue;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 8px 10px;
+  }
+
+  .input-cont select {
+    outline-color: lightblue;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+
+  .input-cont small {
+    color: red;
+    top: -3px;
+    left: -8px;
+    position: absolute;
+  }
+
+  .select-region {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .select-region h4 {
+    margin: 0;
+    /* font-weight: 900; */
+  }
+
+  .region span {
+    /* font-weight: 600; */
+  }
+
+  .city-details,
+  .email-number-cont {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .phone-cont {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .country-code {
+    background-color: rgb(235, 235, 240);
+    padding: 7px 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .phone-cont input {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    flex: 1;
+  }
+
+  .btn {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: end;
+  }
+
+  .btn button {
+    color: rgb(0, 128, 255);
+    border-radius: 7px;
+    border: 1px solid rgb(126, 126, 126);
+    padding: 4px 10px;
+  }
+
+  .order-cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px gainsboro solid;
+    /* padding: 10px; */
+    height: fit-content;
+    margin-top: 20px;
+  }
+
+  .order-cont span {
+    background-color: rgba(245, 245, 245);
+    padding: 7px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .order-cont .top {
+    display: flex;
+    background-color: rgba(235, 235, 235);
+    padding: 7px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .order-cont .top h4:first-child,
+  .order div:first-child {
+    width: 40%;
+  }
+
+  .order-cont .top h4:nth-child(2),
+  .order div:nth-child(2) {
+    width: 30%;
+    text-align: center;
+  }
+  .order-cont .top h4:last-child,
+  .order div:last-child {
+    width: 20%;
+    text-align: end;
+  }
+
+  .order-cont .top h4 {
+    margin: 0;
+  }
+
+  .orders {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .orders .order {
+    padding: 7px;
+    display: flex;
+    gap: 10;
+    justify-content: space-between;
+  }
+
+  .bg {
+    background-color: rgba(235, 235, 235);
+  }
+
+  .order div {
+    font-size: 0.9rem;
+  }
+
+  .order-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    margin-top: 20px;
+  }
+
+  .order-bottom h4 {
+    margin: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  section {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section .top:first-child {
+    width: 85%;
+    border-bottom: 2px red solid;
+    margin-bottom: 25px;
+  }
+
+  section .top h1 {
+    font-size: 2.1rem;
+  }
+
+  .checkout-cont {
+    width: 90%;
+    border: 1px gainsboro solid;
+    margin-bottom: 70px;
+  }
+
+  .checkout-cont .top-box {
+    background-color: black;
+    color: rgba(255, 255, 255);
+  }
+
+  .checkout-cont .top-box p {
+    margin: 0;
+    padding: 8px 10px;
+  }
+
+  .checkout-cont .top-box p:last-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.349);
+  }
+
+  form {
+    display: flex;
+    padding: 25px;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .checkout-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .user-details-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .user-details-cont .name-cont {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .input-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .input-cont span {
+    position: relative;
+    font-weight: 600;
+    margin-left: 7px;
+  }
+
+  .input-cont input {
+    outline-color: lightblue;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 8px 10px;
+  }
+
+  .input-cont select {
+    outline-color: lightblue;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 1rem;
+  }
+
+  .input-cont small {
+    color: red;
+    top: -3px;
+    left: -8px;
+    position: absolute;
+  }
+
+  .select-region {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .select-region h4 {
+    margin: 0;
+    /* font-weight: 900; */
+  }
+
+  .region span {
+    /* font-weight: 600; */
+  }
+
+  .city-details,
+  .email-number-cont {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .phone-cont {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  .country-code {
+    background-color: rgb(235, 235, 240);
+    padding: 7px 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  .phone-cont input {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    flex: 1;
+  }
+
+  .btn {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    justify-content: end;
+  }
+
+  .btn button {
+    color: rgb(0, 128, 255);
+    border-radius: 7px;
+    border: 1px solid rgb(126, 126, 126);
+    padding: 4px 10px;
+  }
+
+  .order-cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px gainsboro solid;
+    /* padding: 10px; */
+    height: fit-content;
+    margin-top: 20px;
+  }
+
+  .order-cont span {
+    background-color: rgba(245, 245, 245);
+    padding: 7px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .order-cont .top {
+    display: flex;
+    background-color: rgba(235, 235, 235);
+    padding: 7px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .order-cont .top h4:first-child,
+  .order div:first-child {
+    width: 40%;
+  }
+
+  .order-cont .top h4:nth-child(2),
+  .order div:nth-child(2) {
+    width: 30%;
+    text-align: center;
+  }
+  .order-cont .top h4:last-child,
+  .order div:last-child {
+    width: 25%;
+    text-align: end;
+  }
+
+  .order-cont .top h4 {
+    margin: 0;
+  }
+
+  .orders {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .orders .order {
+    padding: 7px;
+    display: flex;
+    gap: 10;
+    justify-content: space-between;
+  }
+
+  .bg {
+    background-color: rgba(235, 235, 235);
+  }
+
+  .order div {
+    font-size: 0.9rem;
+  }
+
+  .order-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    margin-top: 20px;
+  }
+
+  .order-bottom h4 {
+    margin: 0;
+  }
+}
